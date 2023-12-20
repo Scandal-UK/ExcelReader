@@ -20,9 +20,9 @@ public class DictionaryMapperTests
 
         var row = new Dictionary<string, string>
         {
-            { "Id", "1" },
-            { "Name", "John" },
-            { "Age", "30" },
+            { nameof(FakeEntity.Id), "1" },
+            { nameof(FakeEntity.Name), "John" },
+            { nameof(FakeEntity.Age), "30" },
         };
 
         // Act
@@ -45,9 +45,9 @@ public class DictionaryMapperTests
 
         var row = new Dictionary<string, string>
         {
-            { "Name", "Jane" },
-            { "Age", "25" },
-            { "Id", "2" },
+            { nameof(FakeEntity.Name), "Jane" },
+            { nameof(FakeEntity.Age), "25" },
+            { nameof(FakeEntity.Id), "2" },
         };
 
         // Act
@@ -70,8 +70,8 @@ public class DictionaryMapperTests
 
         var row = new Dictionary<string, string>
         {
-            { "Id", "3" },
-            { "Age", string.Empty },
+            { nameof(FakeEntity.Id), "3" },
+            { nameof(FakeEntity.Age), string.Empty },
         };
 
         // Act
@@ -93,9 +93,9 @@ public class DictionaryMapperTests
 
         var row = new Dictionary<string, string>
         {
-            { "id", "1" },
-            { "name", "John" },
-            { "age", "30" },
+            { nameof(FakeEntity.Id).ToLower(), "1" },
+            { nameof(FakeEntity.Name).ToLower(), "John" },
+            { nameof(FakeEntity.Age).ToLower(), "30" },
         };
 
         // Act
@@ -118,9 +118,9 @@ public class DictionaryMapperTests
 
         var row = new Dictionary<string, string>
         {
-            { "Id", "1" },
-            { "Name", "John" },
-            { "Age", "30" },
+            { nameof(FakeEntity.Id), "1" },
+            { nameof(FakeEntity.Name), "John" },
+            { nameof(FakeEntity.Age), "30" },
             { "Foo", "Bar" },
         };
 
@@ -151,9 +151,9 @@ public class DictionaryMapperTests
 
         var row = new Dictionary<string, string>
         {
-            { "Id", "1" },
-            { "IsMember", "true" },
-            { "Age", "string value" },
+            { nameof(FakeEntity.Id), "1" },
+            { nameof(FakeEntity.IsMember), "true" },
+            { nameof(FakeEntity.Age), "string value" },
         };
 
         // Act
@@ -173,9 +173,9 @@ public class DictionaryMapperTests
 
         var row = new Dictionary<string, string>
         {
-            { "Id", "1" },
-            { "IsMember", "string value" },
-            { "Age", "30" },
+            { nameof(FakeEntity.Id), "1" },
+            { nameof(FakeEntity.IsMember), "string value" },
+            { nameof(FakeEntity.Age), "30" },
         };
 
         // Act
@@ -195,9 +195,9 @@ public class DictionaryMapperTests
 
         var row = new Dictionary<string, string>
         {
-            { "Id", "1" },
-            { "CreatedDate", "string value" },
-            { "Age", "30" },
+            { nameof(FakeEntity.Id), "1" },
+            { nameof(FakeEntity.CreatedDate), "string value" },
+            { nameof(FakeEntity.Age), "30" },
         };
 
         // Act
@@ -217,9 +217,9 @@ public class DictionaryMapperTests
 
         var row = new Dictionary<string, string>
         {
-            { "Id", "1" },
-            { "IsMember", "string value" },
-            { "Age", "string value" },
+            { nameof(FakeEntity.Id), "1" },
+            { nameof(FakeEntity.IsMember), "string value" },
+            { nameof(FakeEntity.Age), "string value" },
         };
 
         // Act
@@ -239,8 +239,8 @@ public class DictionaryMapperTests
 
         var row = new Dictionary<string, string>
         {
-            { "Id", "1" },
-            { "Tags", "first, second, third" },
+            { nameof(FakeEntity.Id), "1" },
+            { nameof(FakeEntity.Tags), "first, second, third" },
         };
 
         // Act
@@ -264,8 +264,8 @@ public class DictionaryMapperTests
 
         var row = new Dictionary<string, string>
         {
-            { "Id", "1" },
-            { "Numbers", "1, 2, 3, 4" },
+            { nameof(FakeEntity.Id), "1" },
+            { nameof(FakeEntity.Numbers), "1, 2, 3, 4" },
         };
 
         // Act
@@ -289,9 +289,9 @@ public class DictionaryMapperTests
 
         var row = new Dictionary<string, string>
         {
-            { "Tags", string.Empty },
-            { "Numbers", string.Empty },
-            { "RelatedFakeEntities", string.Empty },
+            { nameof(FakeEntity.Tags), string.Empty },
+            { nameof(FakeEntity.Numbers), string.Empty },
+            { nameof(FakeEntity.RelatedFakeEntities), string.Empty },
         };
 
         // Act
@@ -315,8 +315,8 @@ public class DictionaryMapperTests
 
         var row = new Dictionary<string, string>
         {
-            { "Id", "1" },
-            { "RelatedEntity", "Foo Bar" },
+            { nameof(FakeEntity.Id), "1" },
+            { nameof(FakeEntity.RelatedEntity), "Foo Bar" },
         };
 
         // Act
@@ -339,7 +339,7 @@ public class DictionaryMapperTests
 
         var row = new Dictionary<string, string>
         {
-            { "Id", "1" },
+            { nameof(FakeEntity.Id), "1" },
             { "Bar", "Something else" },
         };
 
@@ -364,8 +364,8 @@ public class DictionaryMapperTests
 
         var row = new Dictionary<string, string>
         {
-            { "Id", "1" },
-            { "Unmappable", "value" },
+            { nameof(FakeEntity.Id), "1" },
+            { nameof(FakeEntity.Unmappable), "value" },
         };
 
         // Act
@@ -389,8 +389,8 @@ public class DictionaryMapperTests
 
         var row = new Dictionary<string, string>
         {
-            { "Id", "1" },
-            { "Unparsable", "value" },
+            { nameof(FakeEntity.Id), "1" },
+            { nameof(FakeEntity.Unparsable), "value" },
         };
 
         // Act
@@ -414,8 +414,8 @@ public class DictionaryMapperTests
 
         var row = new Dictionary<string, string>
         {
-            { "Id", "1" },
-            { "NullableUnparsable", "value" },
+            { nameof(FakeEntity.Id), "1" },
+            { nameof(FakeEntity.NullableUnparsable), "value" },
         };
 
         // Act
@@ -438,9 +438,9 @@ public class DictionaryMapperTests
 
         var row = new Dictionary<string, string>
         {
-            { "Id", "1" },
-            { "Name", "  John  " },
-            { "Age", "  30  " },
+            { nameof(FakeEntity.Id), "1" },
+            { nameof(FakeEntity.Name), "  John  " },
+            { nameof(FakeEntity.Age), "  30  " },
         };
 
         // Act

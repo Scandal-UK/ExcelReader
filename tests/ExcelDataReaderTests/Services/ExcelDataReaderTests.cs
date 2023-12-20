@@ -134,5 +134,5 @@ public class ExcelDataReaderTests
             [6, true, 32, "Sue", CurrentDateMinusMinutes(30), "Sue", "Bar"],
         ]);
 
-    private static DateTimeOffset CurrentDateMinusMinutes(int mins) => DateTimeOffset.Now.AddMinutes(-mins);
+    private static DateTimeOffset CurrentDateMinusMinutes(int mins) => DateTimeOffset.UtcNow.AddMinutes(-mins);
 }
